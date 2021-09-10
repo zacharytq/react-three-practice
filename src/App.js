@@ -20,6 +20,8 @@ function App() {
     <>
       <Canvas colorManagement camera={{position: [-5, 2, 10], fov: 60}}>
         <ambientLight intensity={0.3} />
+        <pointLight position={[-10, 0, -20]} intensity={0.5} />
+        <pointLight position={[0, -10, 0]} intensity={1.5} />
         <Box position={[0, 1, 0]} color='pink' />
         <Box position={[-2, 1, -5]} color='lightblue'/>
         <Box position={[5, 1, -2]} color='red'/>
