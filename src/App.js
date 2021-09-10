@@ -20,6 +20,17 @@ function App() {
     <>
       <Canvas colorManagement camera={{position: [-5, 2, 10], fov: 60}}>
         <ambientLight intensity={0.3} />
+        <directionalLight 
+          position={[0, 10, 0]}
+          intensity={1}
+          shadowMapWidth={1024}
+          shadowMapHeight={1024}
+          shadowCameraFar={50}
+          shadowCameraLeft={-10}
+          shadowCameraRight={10}
+          shadowCameraTop={10}
+          shadowCameraBottom={-10}
+        />
         <pointLight position={[-10, 0, -20]} intensity={0.5} />
         <pointLight position={[0, -10, 0]} intensity={1.5} />
         <Box position={[0, 1, 0]} color='pink' />
