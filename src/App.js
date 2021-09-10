@@ -33,6 +33,14 @@ function App() {
         />
         <pointLight position={[-10, 0, -20]} intensity={0.5} />
         <pointLight position={[0, -10, 0]} intensity={1.5} />
+
+        <group>
+          <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -3, 0]}>
+            <planeBufferGeometry attach='geometry' args={[100,100]} />
+            <meshStandardMaterial attach='material' color='yellow' />
+          </mesh>
+        </group>
+
         <Box position={[0, 1, 0]} color='pink' />
         <Box position={[-2, 1, -5]} color='lightblue'/>
         <Box position={[5, 1, -2]} color='red'/>
