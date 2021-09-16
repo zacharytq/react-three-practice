@@ -11,18 +11,15 @@ export default function Model(props) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <group name="Light" position={[4.08, 5.9, -1.01]} rotation={[1.89, 0.88, -2.05]} />
-        <group name="Camera" position={[7.36, 4.96, 6.93]} rotation={[1.24, 0.33, -0.76]} />
-        <group name="Empty" rotation={[0, 0, -Math.PI / 2]} scale={[2.86, 1, 1]} />
-        <group name="Empty001" />
         <mesh
           name="Cylinder"
           castShadow
           receiveShadow
           geometry={nodes.Cylinder.geometry}
-          material={materials['Material.001']}
           scale={[0.2, 12, 1]}
-        />
+        >
+          <meshStandardMaterial attach='material' color='red' />
+        </mesh>
       </group>
     </group>
   )
